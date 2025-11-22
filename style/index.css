@@ -31,8 +31,8 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-
-  z-index: 2;
+  width: 100%;
+  z-index: 1000;
 }
 ul.links a {
   text-decoration: none;
@@ -66,14 +66,21 @@ ul.links a:hover {
   }
 }
 .hero_content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   position: relative;
-  transition-duration: 2s;
+  transition: all 5s;
   color: darkblue;
   animation-name: hero-ani;
   animation-duration: 1s;
+  z-index: 1;
 }
+
 .hero_content:hover {
-  transform: translateY(-19px);
+  transform: translatex(-19px);
 }
 @keyframes hero-ani {
   0% {
@@ -81,7 +88,7 @@ ul.links a:hover {
     bottom: 0;
   }
   100% {
-    top: 30px;
+    top: 20px;
     bottom: 30px;
   }
 }
@@ -94,6 +101,7 @@ ul.links a:hover {
   text-align: center;
   width: 760px;
   font-weight: bold;
+  color:purple;
 }
 .hero button {
   background-color: blue;
@@ -405,7 +413,7 @@ button {
 }
 @media only screen and (max-width: 480px) {
   .hero {
-    padding: 50px 20px;
+    padding-top: 70px;
   }
 
   .hero_content h2 {
@@ -421,6 +429,23 @@ button {
     width: 100%;
     font-size: 16px;
     padding: 12px;
+  }
+}
+@media only screen and(max-width:768px) {
+  .hero_content {
+    padding: 10px;
+    text-align: center;
+  }
+  .hero {
+    height: auto;
+
+    padding-top: 70px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero p {
+    font-size: 16px;
   }
 }
 
