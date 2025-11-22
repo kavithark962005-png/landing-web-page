@@ -44,7 +44,10 @@ ul.links a:hover {
   text-shadow: 0 0 25px darkmagenta;
 }
 .hero {
-  background: url("../asserts/car.jpg ") center/cover no-repeat;
+  background-image: url("../asserts/car.jpg ");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-position: center;
   width: 100%;
   height: 100vh;
@@ -54,11 +57,12 @@ ul.links a:hover {
   align-items: center;
   color: white;
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .hero {
-    background: url("../asserts/car.jpg");
+    background-image: url("../asserts/car.jpg");
     background-position: center center;
     background-size: cover;
+    height: 50vh;
   }
 }
 .hero_content {
@@ -452,7 +456,18 @@ button {
 .foot {
   text-align: center;
   justify-items: center;
-  background: url("../asserts/scoope.jpg") center/ cover no-repeat;
+  background-image: url("../asserts/scoope.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and(max-width:768px) {
+  .foot {
+    background-image: url("../asserts/scoope.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 50vh;
+  }
 }
 .footer1 button {
   background-color: purple;
