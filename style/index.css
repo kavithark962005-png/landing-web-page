@@ -44,7 +44,8 @@ ul.links a:hover {
   text-shadow: 0 0 25px darkmagenta;
 }
 .hero {
-  background: url("../asserts/car.jpg") center/cover no-repeat;
+  background: url("../asserts/car.jpg ") center/cover no-repeat;
+  background-position: center;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -52,6 +53,13 @@ ul.links a:hover {
   justify-content: center;
   align-items: center;
   color: white;
+}
+@media (max-width: 768px) {
+  .hero {
+    background: url("../asserts/car.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
 }
 .hero_content {
   position: relative;
